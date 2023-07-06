@@ -1,17 +1,137 @@
- <!DOCTYPE html>
- <html lang="en">
- 
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Hello Men</title>
- </head>
- 
- <body>
- 	<h2>hello men</h2>
-  <h2>yunfan@88.com</h2>
-     <div class="bgimg">
- </body>
- 
- </html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Hello</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	</head>
+	<style>
+		html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: Gotham, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	overflow: hidden;
+	line-height: 1.3;
+	height: 100%;
+	width: 100%;
+	background-color: #040404;
+}
+
+#vignette {
+	z-index: 1;
+	background-image: -moz-radial-gradient(transparent, rgba(0,0,0,.3));
+	background-image: -webkit-radial-gradient(transparent, rgba(0,0,0,.3));
+	background-image: -ms-radial-gradient(transparent, rgba(0,0,0,.3));
+	background-image: -o-radial-gradient(transparent, rgba(0,0,0,.3));
+	background-image: radial-gradient(transparent, rgba(0,0,0,.3));
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 2;
+	width: 300px;
+	max-width: 50vw;
+	height: 150px;
+	max-height: 30vw;
+	text-align: center;
+	color: #fff;
+}
+
+	#content #hello {
+		font-size: min(15vw, 5em);
+		text-shadow: 0 1px 3px rgba(0,0,0,.2);
+		cursor: default;
+		color:darkcyan;
+	}
+
+		#content #hello:hover {
+			animation: wiggle 10s infinite;
+		}
+
+	#content #ping {
+		font-size: min(4vw, 1.1em);
+		color: #fff;
+		opacity: 0.5;
+		text-decoration: none;
+	}
+
+		#content #ping:hover {
+			opacity: 1;
+		}
+
+		#content #ping:after {
+			content: attr(data-name) "@" attr(data-domain);
+		}
+
+@keyframes wiggle {
+	0% { transform: rotate(0deg) scale(1.0); }
+	2% { transform: rotate(5deg) scale(1.0); }
+	4% { transform: rotate(-10deg) scale(1.0); }
+	6% { transform: rotate(10deg) scale(1.0); }
+	8% { transform: rotate(-5deg) scale(1.0); }
+	10% { transform: rotate(0deg) scale(1.0); }
+	100% { transform: rotate(0deg) scale(1.0); }
+}
+	</style>
+	<body>
+		<div id="vignette"></div>
+		<div id="content">
+			<div id="hello">Hello</div>
+			<a href="#" id="ping" data-name="yunfan" data-domain="88.com"></a>
+		</div>
+	</body>
+</html>
